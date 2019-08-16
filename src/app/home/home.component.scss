@@ -1,0 +1,302 @@
+body {
+    background: black;
+  }
+  /* START OF HEADER */
+.mainHeader{
+    padding-bottom:270px;
+ }
+.mainHeaderTitle{ 
+    font-size:53px;
+    line-height: 80px;
+    font-weight: 400;
+    color: white;
+    font-family: IBMPlexSans-ExtraLight;
+    padding-top:170px;
+ }
+.mainHeaderSubtitle{
+  opacity: 0.6;
+    font-size:20px;
+    font-family:IBMPlexSans-SemiBold;
+    padding-top:17px;
+    color:rgb(255, 255, 255);
+ }
+  /* END OF HEADER */
+ /* START OF CONVERSION BAR */
+
+ .conversionBar{
+    background-color:#08082b; /* #212529*/
+    padding:40px ;
+    margin-top:80px;
+  }
+  .conversionBarBuy{
+    font-family:IBMPlexSans-SemiBold;
+    font-size:24px;
+    color:white;
+    margin:10px 10px 10px 0px;
+  }
+  .form-control-conversion-input{
+    height:calc(1.5em + 1rem + 10px);
+    padding:.5rem 1rem;
+    font-size:1.25rem;
+    line-height:1.5;
+    border-radius:.3rem;
+    display: block;
+    width: 150px;
+    }
+  
+    .form-control-conversion-button{
+      height:calc(1.5em + 1rem + 10px);
+      padding:.5rem 1rem;
+      font-size:1.25rem;
+      line-height:1.5;
+      border-radius:.3rem;
+      display: block;
+      width: 140px;
+     }
+  
+    .border-right-conversion {
+      border-right: 1px solid #e6e6e6;
+      line-height: 5px;
+    }
+
+  .conversionBarDropdownBTC{
+    padding: 0 20px 0 20px;
+    font-family:IBMPlexSans-SemiBold;
+    color: #212833;
+  }
+  .conversionBarWith{
+    font-family:IBMPlexSans-SemiBold;
+    font-size:24px;
+    color:white;
+    margin: 10px 0px 10px 0px;
+  }
+  .conversionBarDropdownUGX{
+    padding: 0 20px 0 20px;
+    font-family:IBMPlexSans-SemiBold;
+    color: #212833;
+    padding-top:20px;
+    
+  }
+  .conversionBarBuyButton{
+    font-family:IBMPlexSans-SemiBold;
+    font-size:20px;
+    padding:12px 60px 12px 60px;
+  }
+/* END OF CONVERSION BAR */
+/* START OF CARD*/
+/* .box {
+  background: white;
+  border-radius: 5px;
+}
+.box:hover {
+  height:350px;
+  margin-top:-75px;
+}
+
+.box:hover > .hid-box{
+  opacity: 1;
+}
+.tryyy{
+  opacity: 0;
+}
+.box:hover > .tryyy {
+  opacity: 1;
+} */
+.cardMainContainer{
+  margin-top:-170px;
+  margin-left:100px;
+  position:absolute;
+  font-family:DINPro-Medium;
+}
+.parent {
+  position: relative;
+  height:276px;
+}
+.parent:hover{
+  box-shadow: 0px 5px rgba(109, 105, 105, 0.8);
+}
+.absolute {
+  padding-top:5px;
+  bottom: 12px;
+  opacity:0;
+} 
+.cardSubtitle{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.cardAmount{
+  font-size:20px;
+  letter-spacing: 1px;
+}
+.cardPercentagePink{
+  font-size:15px;
+  color:#e50370;
+}
+.cardPercentageGreen{
+  font-size:15px;
+  color:#00c087;
+}
+.cardTime{
+  background-color:rgba(240,240,240,0.6);
+  border-radius:22px;
+  text-align:center;
+  font-size:12px;
+  height:22px;
+  line-height:22px;
+  width:1%;
+ 
+}
+.cardGraph{
+  width:300px;
+  height:150px; 
+  padding:30px 10px 30px 10px;
+}
+.cardBuyButton {
+  cursor: pointer;
+  height: 36px;
+  margin-right: 0px;
+  line-height: 36px;
+  font-size: 16px;
+  color: white;
+  background-color: #00c087;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none; 
+
+}
+.cardSellButton {
+    cursor: pointer;
+    height: 36px;
+    margin-right: 0px;
+    line-height: 36px;
+    font-size: 16px;
+    color: white;
+    background-color: #e50370;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none; 
+}
+/* END OF CARD*/
+/* START OF GET STARTED */
+.getStartedContainer{
+    color:black;
+  }
+  .getStartedMainCard{
+    color:gray;
+    padding:15px 0px 32px 0px;
+    background: transparent;
+    border: none;
+  }
+
+  .getStartedTitle{
+    font-size:53px;
+    font-family: IBMPlexSans-ExtraLight;
+    padding-top:100px;
+  }
+  .getStartedSubtitle{
+    font-size:20px;
+    font-family:IBMPlexSans-SemiBold;
+    padding-top:17px;
+    color: gray;
+  }
+  .getStartedStep{
+    font-family:IBMPlexSans-SemiBold;
+    padding-top:40px;
+  }
+  .getStartedDescription{
+    font-family:IBMPlexSans-SemiBold;
+    padding-top:18px;
+  }
+  .getStartedDivider1{
+    padding-left:200px;
+  }
+  .getStartedDivider2{
+    padding-right:50px;
+  }
+  .getStartedDivider3{
+    padding-right:100px;
+  }
+  .getStartedArrow{
+    margin-top:100px;
+  }
+  /* END OF GET STARTED*/
+
+  /* START OF FASTEST GROWING*/
+  .fastestGrowingHeader{
+    color:gray;
+    padding-top:90px;
+  }
+  .fastestGrowingTitle{
+    font-size:53px;
+    color: white;
+    font-family: IBMPlexSans-ExtraLight;
+  }
+  .fastestGrowingSubtitle{
+    font-size:20px;
+    font-family:IBMPlexSans-SemiBold;
+    padding-top:17px;
+    padding-bottom:90px;
+  }
+  .fastestGrowingMainCardBody{
+    padding:30px 0px 30px 0px; 
+    width:12rem;
+  }
+  .fastestGrowingMainCard{
+    color:gray;
+    padding:15px 0px 0px 0px;
+    background-color: #08082b;
+  }
+  .fastestGrowingMainCardBodyTitle{
+    color: white;
+    font-family:IBMPlexSans-SemiBold;
+    padding-top:40px;
+  }
+  .fastestGrowingMainCardBodySubtitle{
+    font-family:IBMPlexSans-SemiBold;
+    padding-top:15px;
+  }
+  /* END OF FASTEST GROWING*/
+
+
+  /* START OF FOOTER*/
+  .footerHeader{
+    color:gray;
+    padding-top:180px;
+    padding-bottom:150px;
+    background: black;
+  }
+  .footerTitle{
+    font-size:45px;
+    color: white;
+    font-family: IBMPlexSans-ExtraLight;
+    padding-bottom:60px;
+  }
+  .footerButtons{
+    margin-left:20px;
+  }
+  .footerRegisterButton{
+    font-family:IBMPlexSans-SemiBold;
+    margin-right:28px;
+    font-size:84%;
+    background-color:#f0b90b;
+    color:black;
+    width:133px;
+    line-height:25px;
+  }
+  .footerLoginButton{
+    font-family:IBMPlexSans-SemiBold;
+    margin-right:28px;
+    font-size:84%;
+    color:white;
+    width:130px;
+    line-height:25px;
+    
+  }
+  .footerLoginButton:hover{
+  border-color:#f0b90b;
+  background-color:transparent;
+  color:#f0b90b;
+  }
+    /* END OF FOOTER*/

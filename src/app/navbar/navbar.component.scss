@@ -1,0 +1,46 @@
+.bg-darkk{
+    background-color: black;
+  }
+  .navbar-brand{
+    padding-left: 15px;
+  }
+  
+  .navSupport{
+    font-weight: bold;
+      font-size:84%;
+      margin:5px 12px 0px 0px;
+      font-family:IBMPlexSans-Medium;
+    }
+   .navAnnouncement{
+      font-weight: bold;
+      font-size:84%;
+      margin:5px 10px 0px 0px;
+      font-family:IBMPlexSans-Medium;
+    }
+  .navRegisterButton {
+      display: block;
+      border: 1px solid #F0B90B;
+      height: 28px;
+      line-height: 26px;
+      width:72px;
+      margin: 10px 28px 0 15px;
+      padding: 0px 10px;
+      text-align: center;
+      border-radius: 2px;
+      font-size:84%;  
+      font-family:IBMPlexSans-Medium;
+   }
+  .navRegisterButton:hover{
+      background-color:  #f0b90b;
+   }
+  .navRegisterText{
+      color:#f0b90b;
+   }
+  .navRegisterText:hover{
+      color:black;
+   }
+  .navLogIn{
+      margin:5px 0px 0px 0px;
+      font-size:85%;
+      font-family:IBMPlexSans-Medium;
+   }

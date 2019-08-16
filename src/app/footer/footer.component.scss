@@ -1,0 +1,38 @@
+.theFooterSide{
+    background: black;
+    color:white;
+    padding-bottom:30px;
+    background:black;
+}
+
+  .footerContainer{
+    
+    color:white;
+    padding:50px 0px 30px 50px;
+    background:black;
+    
+  }
+  .footerIcon{
+    margin-bottom:5px;
+    width:15px;
+  }
+  .footerLogo{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    width:200px;
+  }
+  .footerLogoSubtitle{
+    font-size: 16px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  .title-footer{
+    font-family:IBMPlexSans-SemiBold;
+    color:white;
+    font-size: 18px;
+  }
+  .sub-footer{
+    font-family:IBMPlexSans-Regular;
+    color:darkgray;
+    font-size: 14px;
+  }

@@ -1,0 +1,180 @@
+
+<!----START OF HEADER---->   
+
+
+<body style="background-color: black, "> 
+    <div class="container-fluid mainHeader" >
+    
+    
+            <div>
+              <h1 class="mainHeaderTitle" align="center">The Easiest Way to Buy Cryptocurrency in Uganda</h1>
+              <h3 class="mainHeaderSubtitle" align="center">Industry-leading security and full 24-hour support from Binance</h3>
+            </div>
+         
+            <div class="row container-fluid conversionBar rounded mx-auto col-11 row justify-content-start">
+
+                <div class="conversionBarBuy col-1">Buy</div>
+
+                    <div class="input-group col-4 ">
+                      <input type="text" class="form-control form-control-conversion-input border-right-conversion" aria-label="Text input with dropdown button" placeholder="Enter Amount">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary dropdown-toggle form-control-conversion-button bg-light" style="border:none;" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span><img src="../assets/images/{{cryptoListImage[cryptoImage]}}" width="22%" style="margin-top:-3px;"></span><span class="conversionBarDropdownBTC">{{cryptoListText[cryptoImage]}}</span></button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" (click)="selectCrypto(1)"><span><img src="../assets/images/coin-btc.png"></span>BTC</a>
+                            <a class="dropdown-item" (click)="selectCrypto(2)"><span><img src="../assets/images/coin-eth.png"></span>ETH</a>
+                            <a class="dropdown-item" (click)="selectCrypto(3)"><span><img src="../assets/images/coin-bnb.png"></span>BNB</a>
+                            <a class="dropdown-item" (click)="selectCrypto(4)"><span><img src="../assets/images/coin-pax.png"></span>PAX</a>
+                        </div>
+                      </div>
+                    </div>
+
+                  <div class="conversionBarWith col-1">With</div>
+                  <div class="input-group col-4 ">
+                      <input type="text" placeholder="Enter Amount" class="form-control form-control-conversion-input border-right-conversion " aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <div class="input-group-append ">
+                          <span class="input-group-text form-control-conversion-button bg-light" id="basic-addon2"><span><img src="../assets/images/sg.png" width="20%"></span><span class="conversionBarDropdownUGX">UGX</span></span>
+                        </div>
+                    </div>
+                    <div class = "col-1"><button type="button" class="btn btn-warning conversionBarBuyButton" >Buy</button></div>
+                </div>
+            </div>
+    <!----END OF HEADER---->  
+    <!----START OF CARD---->  
+    <div class="row container cardMainContainer">  
+    
+            <div class="card col parent" id="box1" >
+                <div class="card-body" >
+                  <div class="row">
+                  <div class="col"><h6 class="card-title"><span><img src="../assets/images/coin-btc.png" width="10%"></span>&nbsp;&nbsp;Bitcoin<span class="card-subtitle mb-2 text-muted cardSubtitle">&nbsp;&nbsp;BTC</span></h6>
+                  <p class="card-text cardAmount" >33,941,458&nbsp;UGX<span class="cardPercentagePink">&nbsp;&nbsp;-0.17%</span></p>
+                </div>
+                <div class="col cardTime">24H</div>
+                </div>
+                  <hr>
+                  <div ><img class="cardGraph" src="../assets/images/graph1.png" ></div>
+                  <div class="row container mx-auto absolute" id="underr1">
+                    <div class="card-link col cardBuyButton"><a class="cardBuyButton" href="#">Buy</a></div>
+                    <div class="card-link col cardSellButton"><a class="cardSellButton" href="#">Sell</a></div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card col parent" id="box2">
+                  <div class="card-body">
+                    <div class="row">
+                    <div class="col"><h6 class="card-title"><span><img src="../assets/images/coin-eth.png" width="10%"></span>&nbsp;&nbsp;Ethereum<span class="card-subtitle mb-2 text-muted cardSubtitle">&nbsp;&nbsp;ETH</span></h6>
+                    <p class="card-text cardAmount" >997,011&nbsp;UGX<span class="cardPercentagePink">&nbsp;&nbsp;-0.71%</span></p>
+                  </div>
+                  <div class="col cardTime" >24H</div>
+                  </div>
+                    <hr>
+                    <div><img class="cardGraph" src="../assets/images/graph2.png"></div>
+                    <div class="row container mx-auto absolute" id="underr2">
+                      <div class="card-link col cardBuyButton"><a class="cardBuyButton" href="#">Buy</a></div>
+                      <div class="card-link col cardSellButton"><a class="cardSellButton" href="#">Sell</a></div>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="card col parent" id="box3">
+                    <div class="card-body">
+                      <div class="row">
+                      <div class="col"><h6 class="card-title"><span><img src="../assets/images/coin-bnb.png" width="10%"></span>Binance&nbsp;Coin<span class="card-subtitle mb-2 text-muted cardSubtitle">&nbsp;&nbsp;BNB</span></h6>
+                      <p class="card-text cardAmount">128,449&nbsp;UGX<span class="cardPercentageGreen">&nbsp;&nbsp;+2.75%</span></p>
+                    </div>
+                    <div class="col cardTime">24H</div>
+                    </div>
+                      <hr>
+                      <div><img class="cardGraph" src="../assets/images/graph3.png"></div>
+                      <div class="row container mx-auto absolute" id="underr3">
+                        <div class="card-link col cardBuyButton"><a class="cardBuyButton" href="#">Buy</a></div>
+                        <div class="card-link col cardSellButton"><a class="cardSellButton" href="#">Sell</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        <!----END OF CARD----> 
+    <!----START OF GET STARTED---->  
+    <div class="jumbotron getStartedContainer">
+            
+            <h1 class="getStartedTitle" align="center">Get Started in Just 3 Steps</h1>
+            <h3 class="lead getStartedSubtitle" align="center">It's easy for anyone to get started</h3>
+          
+            <div class="card-deck container mx-auto">
+                <div class="card getStartedMainCard">
+                  <div class="card-body mx-auto" align="center">
+                        <div><img src="../assets/images/create.png"></div>
+                      <div><h5 class="getStartedCardBodyTitle">Step 1</h5></div>
+                      <div><h6 class="getStartedMainCardBodySubtitle">Create an Account</h6></div>
+                  </div>
+                </div>
+                <div class="col-1">
+                    <div class="getStartedArrow" align="center"><img src="../assets/images/arrow.png"></div>
+                </div>
+                <div class="card getStartedMainCard">
+                    <div class="card-body mx-auto" align="center">
+                        <div><img src="../assets/images/easy.png"></div>
+                        <div><h5 class="getStartedCardBodyTitle">Step 2</h5></div>
+                        <div><h6 class="getStartedMainCardBodySubtitle">Link Your Mobile Money Account</h6></div>
+                    </div>
+                  </div>
+                  <div class="col-1">
+                      <div class="getStartedArrow" align="center"><img src="../assets/images/arrow.png"></div>
+                  </div>
+                <div class="card getStartedMainCard">
+                    <div class="card-body mx-auto" align="center">
+                        <div><img src="../assets/images/world-class.png"></div>
+                        <div><h5 class="getStartedCardBodyTitle">Step 3</h5></div>
+                        <div><h6 class="getStartedMainCardBodySubtitle">Start Buying and Selling</h6></div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+    <!----END OF GET STARTED---->  
+    <!----START OF FASTEST GROWING---->  
+    <div class="fastestGrowingHeader">
+            <h1 class="fastestGrowingTitle" align="center">The Fastest Growing Cryptocurrency Platform</h1>
+            <h3 class="fastestGrowingSubtitle" align="center">Here are a few reasons why Binance is the best place to start.</h3>
+          </div>
+        
+        <div class="card-deck container mx-auto">
+        <div class="card fastestGrowingMainCard">
+          <div class="card-body mx-auto fastestGrowingMainCardBody" align="center">
+              <div><img src="../assets/images/secure.png"></div>
+              <div><h5 class="fastestGrowingMainCardBodyTitle">Secure and Reliable</h5></div>
+              <div><h6 class="fastestGrowingMainCardBodySubtitle">State-of-the-art safe storage technology for maximum security</h6></div>
+          </div>
+        </div>
+        
+        <div class="card fastestGrowingMainCard">
+            <div class="card-body mx-auto fastestGrowingMainCardBody" align="center">
+                <div><img src="../assets/images/easy.png"></div>
+                <div><h5 class="fastestGrowingMainCardBodyTitle">Easy to Use</h5></div>
+                <div><h6 class="fastestGrowingMainCardBodySubtitle">Intuitive, easy-to-use interface Trusted by millions of users in 180 countries worldwide</h6></div>
+            </div>
+          </div>
+        
+        <div class="card fastestGrowingMainCard">
+            <div class="card-body mx-auto fastestGrowingMainCardBody" align="center">
+                <div><img src="../assets/images/world-class.png"></div>
+                <div><h5 class="fastestGrowingMainCardBodyTitle">World-Class Support</h5></div>
+                <div><h6 class="fastestGrowingMainCardBodySubtitle">24/7 online customer support Over 95% of requests processed within 24h</h6></div>
+            </div>
+          </div>
+        </div>
+        <!----END OF FASTEST GROWING---->  
+
+
+<!----START OF FOOTER---->  
+        <div class="footerHeader">
+            <h1 class="footerTitle" align="center">Get started now</h1>
+            <div class="footerButtons" align="center">
+            <button type="button" class="btn footerRegisterButton" routerLink = "/register">Register</button>
+            <button type="button" class="btn btn-outline-light footerLoginButton">Login</button>
+          </div>
+          </div>
+<!----END OF FOOTER---->  
+
+            </body>
+    
+    
