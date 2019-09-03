@@ -1,4 +1,4 @@
-body {
+.body {
     margin-top:60px;
     background-image: url("/assets/images/register.png");
     background-color: #cccccc;
@@ -7,22 +7,29 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    width: 100%;
+    // padding: 100px;
    }
   .card-title{
     color: gold;
     font-family: IBMPlexSans-SemiBold;
   }
-
   .col-form-label{
     color: white;
     font-family: IBMPlexSans-Regular;
   }
   .card{
-    
-    color: black;
-    box-shadow: 5px 5px 50px 5px black;
-    top: 12%;
-    width: 50%;
+    background-color: #343a40!important;
+    top: 30px;
+    bottom: 30px;
+    width: 650px;
+    max-width: 100%;
+    position: absolute;
+    padding: 10px;
+    background: transparent!important;
+    border: 0;
+    margin-left: 310px;
+
     //   background: rgb(255, 255, 255); /* Fallback for older browsers without RGBA-support */
     //   background: rgba(255, 255, 255, 0.5);
   }

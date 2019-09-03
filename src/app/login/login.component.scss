@@ -1,4 +1,19 @@
-body {
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.body {
     margin-top:60px;
     background-image: url("/assets/images/register.png");
     background-color: #cccccc;
@@ -20,7 +35,7 @@ body {
   .card{
     color: black;
     box-shadow: 5px 5px 50px 5px black;
-    top: 12%;
+    top: 5%;
     
     //   background: rgb(255, 255, 255); /* Fallback for older browsers without RGBA-support */
     //   background: rgba(255, 255, 255, 0.5);

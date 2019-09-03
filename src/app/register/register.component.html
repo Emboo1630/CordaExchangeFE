@@ -1,7 +1,9 @@
-<body>
+<app-navbar></app-navbar>
+<div class="body" >
+    <div class="card bg-dark" >
 
-    <div class="card mx-auto bg-dark" style="width: 40rem;">
-        <div class="card-body" style="opacity:1">
+        <div class="card-body rounded " style="flex: 1 1 auto;padding: 1.25rem;color: black;background-color: #343a40!important;
+        box-shadow: 5px 5px 50px 5px black;">
           <h5 class="card-title">Registration</h5>
           <hr>
           <form class="needs-validation" novalidate>
@@ -30,15 +32,18 @@
                       <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
                     </div>
                   </div>
-                  <br>
-            <div class="form-group row ">
-              <div class="col-sm-10 mx-auto">
+             
+            <div class="form-group row" style="margin-top: 33px;">
+              <div class="col-sm-10 mx-auto ">
                 <button type="submit" class="btn btn-warning" style="width: 100%;"><strong>Register</strong></button>
               </div>
             </div>
+           
           </form>
         
         </div>
       </div>
+  
+    </div>
 
-</body>
+    <app-footer></app-footer>

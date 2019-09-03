@@ -1,0 +1,179 @@
+<app-navbar></app-navbar>
+
+<div class="container" style="margin-top:100px;padding-bottom:100px;">
+
+    <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="white" bdcolor="rgba(100,149,237, .8)"
+        type="ball-atom" *ngIf="showSpinner">
+        <p style="font-size: 20px; color: white">Loading...</p>
+    </ngx-spinner>
+
+
+    <div class="card shadow bg-white" style="margin-top:-40px;">
+        <h5 class="card-header">My Token</h5>
+        <div class="card-body" style="max-height: 500px;overflow-y: scroll;">
+            <table class="table table-striped">
+                <thead>
+                    <tr align="center">
+                        <th>Amount</th>
+                        <th>Holder</th>
+                        <th>Hash</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let token of getTokens" align="center">
+                        <td>{{token.amount}}</td>
+                        <td>{{token.holder}}</td>
+                        <td>{{token.hash}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+
+    <div id="orderedTokens" style="padding-top:50px;">
+        <div class="card shadow bg-white">
+            <h3 class="card-header">Orders</h3>
+            <div class="card-body" style="max-height: 500px;overflow-y: scroll;">
+                <table class="table table-striped">
+                    <thead>
+                        <tr align="center">
+                            <th>Amount</th>
+                            <th>Currency</th>
+                            <th>Status</th>
+                            <th>Issuer</th>
+                            <th>Linear Id</th>
+                            <!-- <th>Action</th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let Order of Orders" align="center">
+                            <td>{{Order.amount}}</td>
+                            <td>{{Order.currency}}</td>
+                            <td>{{Order.status}}</td>
+                            <td>{{Order.issuer}}</td>
+                            <td>{{Order.linearId}}</td>
+                            <!-- <td><div>
+                                                    <button class="btn btn-primary"  (click)="updateUser(User)" > <img src="assets/images/edit.png" style="filter: brightness(500%);" width="20px"></button>
+                                                    <button class="btn btn-danger"  (click)="deleteUser(User)"> <img src="assets/images/delete.png" style="filter: brightness(500%);" width="20px"></button></div></td> -->
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6" id="selfIssueTokens" style="padding-top: 50px;">
+            <div class="card">
+                <h5 class="card-header">Self-Issue Token</h5>
+                <div class="card-body">
+                    <form #selfIssueForm="ngForm" (ngSubmit)="selfIssueToken()" novalidate>
+
+                        <div class="form-group">
+                            <label>Currency and Amount </label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span><img
+                                                src="../assets/images/{{cryptoListImage[currencyabc]}}" width="20px;"
+                                                style="margin-top:-3px;"></span><span
+                                            class="conversionBarDropdownBTC">&nbsp;{{cryptoListText[currencyabc]}}
+                                        </span></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" value="USD" (click)="selectCurrency(0)"><span><img
+                                                    src="../assets/images/dollar.png" width="20px;"></span>&nbsp;USD</a>
+                                        <a class="dropdown-item" value="PHP" (click)="selectCurrency(1)"><span><img
+                                                    src="../assets/images/philippine-peso.png"
+                                                    width="20px;"></span>&nbsp;PHP</a>
+                                    </div>
+                                </div>
+
+                                <input style="border-radius: 0px .25rem .25rem 0px;" type="Number" required #amount="ngModel"
+                                    [class.is-invalid]="amount.invalid && amount.touched"
+                                    [class.is-valid]="amount.valid" class="form-control" name="amount"
+                                    [(ngModel)]=selfIssue.amount id="amount" placeholder="Enter preferred amount">
+                                <div class="invalid-feedback">Amount is required. </div>
+                                <div class="valid-feedback">Amount Entered.</div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button type="submit" [disabled]="selfIssueForm.form.invalid"
+                                class="btn btn-primary float-right">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-6" id="verifyOrders" style="padding-top: 50px;">
+            <div class="card">
+                <h5 class="card-header">Verify Order</h5>
+                <div class="card-body">
+                    <form #verifyForm="ngForm" (ngSubmit)="verifyToken()" novalidate>
+                        <div class="form-group">
+                            <label for="amount">Order ID</label>
+                            <input type="text" required #linearId="ngModel"
+                                [class.is-invalid]="linearId.invalid && linearId.touched"
+                                [class.is-valid]="linearId.valid" [(ngModel)]=toBeVerified.linearId name="linearId"
+                                class="form-control" id="linearId" aria-describedby="linearIdHelp"
+                                placeholder="Enter the Linear ID">
+                            <div class="invalid-feedback">Order ID is required. </div>
+                            <div class="valid-feedback">Order ID Entered.</div>
+                        </div>
+
+                        <div>
+                            <button type="submit" [disabled]="verifyForm.form.invalid"
+                                class="btn btn-primary float-right">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6" id="moveTokens2Platform" style="padding-top:50px;">
+            <div class="card">
+                <h5 class="card-header">Move Token to Platform</h5>
+                <div class="card-body">
+                    <form #moveToken2PlatformForm="ngForm" (ngSubmit)="moveToken2Platform()" novalidate>
+                        <div class="form-group">
+                            <label for="recipient">Recipient</label>
+                            <input type="text" required #recipient="ngModel"
+                                [class.is-invalid]="recipient.invalid && recipient.touched"
+                                [class.is-valid]="recipient.valid" [(ngModel)]=moveTokens.recipient name="recipient"
+                                class="form-control" id="recipient" aria-describedby="recipientHelp"
+                                placeholder="Enter the Recipient">
+                            <div class="invalid-feedback">Amount is required. </div>
+                            <div class="valid-feedback">Amount Entered.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="orderId">Order Id</label>
+                            <input type="text" required #orderId="ngModel"
+                                [class.is-invalid]="orderId.invalid && orderId.touched" [class.is-valid]="orderId.valid"
+                                [(ngModel)]=moveTokens.orderId name="orderId" class="form-control" id="orderId"
+                                aria-describedby="orderIdHelp" placeholder="Enter the Order ID">
+                            <div class="invalid-feedback">Order ID is required. </div>
+                            <div class="valid-feedback">Order ID Entered.</div>
+                        </div>
+
+                        <div>
+                            <button type="submit" [disabled]="moveToken2PlatformForm.form.invalid"
+                                class="btn btn-primary float-right">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<app-footer></app-footer>

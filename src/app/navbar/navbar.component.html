@@ -1,26 +1,26 @@
-<!doctype html>
-<html lang="en">
-  <head> 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-  </head>
 
-  <body>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-darkk row">
     <a class="navbar-brand" routerLink=""><img src="../assets/images/logo.PNG" width=130 alt=""></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse col-md-3 offset-md-7" id="navbarCollapse" >
-        <ul class="navbar-nav mr-auto" >
+      <div class="collapse navbar-collapse " id="navbarCollapse" >
+        <ul class="navbar-nav ml-auto" >
           <li class="nav-item active" >
             <a routerLink="/home" class="nav-link navSupport" >Support <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link navAnnouncement" >Announcement</a>
+            <a routerLink="/announcement" class="nav-link navAnnouncement" >Announcement</a>
+          </li>
+          <li class="nav-item active">
+            <a routerLink="/issuer" class="nav-link navAnnouncement" >Issuer</a>
+          </li>
+          <li class="nav-item active">
+            <a routerLink="/platform" class="nav-link navAnnouncement" >Platform</a>
+          </li>
+          <li class="nav-item active">
+            <a routerLink="/user" class="nav-link navAnnouncement" >User</a>
           </li>
           <li class="nav-item active">
                 <a routerLink="/register" class="nav-link navRegisterButton" ><strong><p class="navRegisterText">Register </p></strong></a>
@@ -32,6 +32,12 @@
       </div>
     </nav>
 
+<div class="nav-scroller bg-white shadow-sm " style="margin-top:60px;">
+  <nav class="nav nav-underline container " >
+    <marquee><li class="mx-auto font-weight-bold">[ {{date}} ] &nbsp;&nbsp; Exchange Rate: 1 USD = {{php}} PHP</li></marquee>
+  </nav>
+</div>
+
   
 
     <!-- Bootstrap core JavaScript
@@ -41,5 +47,4 @@
     <!-- <script>window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')</script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script> -->
-  </body>
-</html>
+

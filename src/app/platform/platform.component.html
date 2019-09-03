@@ -1,0 +1,174 @@
+<app-navbar></app-navbar>
+<div class="container" style="margin-top:100px;padding-bottom:100px;">
+
+    <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="white" bdcolor="rgba(100,149,237, .8)"
+        type="ball-atom" *ngIf="showSpinner">
+        <p style="font-size: 20px; color: white">Loading...</p>
+    </ngx-spinner>
+
+
+    <div class="card shadow bg-white" style="margin-top:-40px;">
+        <h3 class="card-header">My Token</h3>
+        <div class="card-body" style="max-height: 500px;overflow-y: scroll;">
+            <table class="table table-striped">
+                <thead>
+                    <tr align="center">
+                        <th>Amount</th>
+                        <th>Holder</th>
+                        <th>Hash</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let token of getTokens" align="center">
+                        <td>{{token.amount}}</td>
+                        <td>{{token.holder}}</td>
+                        <td>{{token.hash}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    
+    <div  id="reservedTokens" style="padding-top:50px;">
+        <div class="card shadow bg-white">
+            <h3 class="card-header">Reserves</h3>
+            <div class="card-body" style="max-height: 500px;overflow-y: scroll;">
+                <table class="table table-striped">
+                    <thead>
+                        <tr align="center">
+                            <th>Amount</th>
+                            <th>Currency</th>
+                            <th>User ID</th>
+                            <th>Linear Id</th>
+                            <!-- <th>Action</th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let reserve of reserves" align="center">
+                            <td>{{reserve.amount}}</td>
+                            <td>{{reserve.currency}}</td>
+                            <td>{{reserve.userId}}</td>
+                            <td>{{reserve.linearId}}</td>
+
+                            <!-- <td><div>
+                                        <button class="btn btn-primary"  (click)="updateUser(User)" > <img src="assets/images/edit.png" style="filter: brightness(500%);" width="20px"></button>
+                                        <button class="btn btn-danger"  (click)="deleteUser(User)"> <img src="assets/images/delete.png" style="filter: brightness(500%);" width="20px"></button></div></td> -->
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div  id="orderedTokens" style="padding-top:50px;">
+    <div class="card shadow bg-white">
+        <h3 class="card-header">Orders</h3>
+        <div class="card-body" style="max-height: 500px;overflow-y: scroll;">
+            <table class="table table-striped">
+                <thead>
+                    <tr align="center">
+                        <th>Amount</th>
+                        <th>Currency</th>
+                        <th>Status</th>
+                        <th>Issuer</th>
+                        <th>Linear Id</th>
+                        <!-- <th>Action</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let Order of Orders" align="center">
+                        <td>{{Order.amount}}</td>
+                        <td>{{Order.currency}}</td>
+                        <td>{{Order.status}}</td>
+                        <td>{{Order.issuer}}</td>
+                        <td>{{Order.linearId}}</td>
+                        <!-- <td><div>
+                                            <button class="btn btn-primary"  (click)="updateUser(User)" > <img src="assets/images/edit.png" style="filter: brightness(500%);" width="20px"></button>
+                                            <button class="btn btn-danger"  (click)="deleteUser(User)"> <img src="assets/images/delete.png" style="filter: brightness(500%);" width="20px"></button></div></td> -->
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+<div class="col-6" id="orderTokens" style="padding-top:50px;">
+<div class="card">
+    <h5 class="card-header">Order Tokens</h5>
+    <div class="card-body">
+        <form #orderForm="ngForm" (ngSubmit)="orderToken()" novalidate>
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="number" required #amount="ngModel" [class.is-invalid]="amount.invalid && amount.touched"
+                    [class.is-valid]="amount.valid" [(ngModel)]=order.amount name="amount" class="form-control"
+                    id="amount" aria-describedby="amountHelp" placeholder="Enter preferred amount">
+                <div class="invalid-feedback">Amount is required. </div>
+                <div class="valid-feedback">Amount Entered.</div>
+            </div>
+            <div class="form-group">
+                <label for="amount">Currency</label>
+                <input type="string" required #currency="ngModel"
+                    [class.is-invalid]="currency.invalid && currency.touched" [class.is-valid]="currency.valid"
+                    [(ngModel)]=order.currency name="currency" class="form-control" id="currency"
+                    aria-describedby="currencyHelp" placeholder="Enter preferred currency">
+                <div class="invalid-feedback">Currency is required. </div>
+                <div class="valid-feedback">Currency Entered.</div>
+            </div>
+
+            <div>
+                <button type="submit" [disabled]="orderForm.form.invalid"
+                    class="btn btn-primary float-right">Submit</button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-6" id="transferTokens" style="padding-top:50px;">
+<div class="card">
+    <h5 class="card-header">Transfer Tokens</h5>
+    <div class="card-body">
+        <form #transferForm="ngForm" (ngSubmit)="transferToken()" novalidate>
+            <div class="form-group">
+                <label for="preOrderId">Pre-Order ID</label>
+                <input type="text" required #preOrderId="ngModel"
+                    [class.is-invalid]="preOrderId.invalid && preOrderId.touched" [class.is-valid]="preOrderId.valid"
+                    [(ngModel)]=transfer.preOrderId name="preOrderId" class="form-control" id="preOrderId"
+                    aria-describedby="preOrderIdHelp" placeholder="Enter the pre-order ID">
+                <div class="invalid-feedback">Pre-Order ID is required. </div>
+                <div class="valid-feedback">Pre-Order ID Entered.</div>
+            </div>
+            <div class="form-group">
+                <label for="walletRef">Wallet's Reference Number</label>
+                <input type="text" required #walletRef="ngModel"
+                    [class.is-invalid]="walletRef.invalid && walletRef.touched" [class.is-valid]="walletRef.valid"
+                    [(ngModel)]=transfer.walletRef name="walletRef" class="form-control" id="walletRef"
+                    aria-describedby="walletRefHelp" placeholder="Enter the Wallet Reference Number">
+                <div class="invalid-feedback">Wallet's Reference Number is required. </div>
+                <div class="valid-feedback">Wallet's Reference Number Entered.</div>
+            </div>
+
+            <div>
+                <button type="submit" [disabled]="transferForm.form.invalid"
+                    class="btn btn-primary float-right">Submit</button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+</div>
+<app-footer></app-footer>
